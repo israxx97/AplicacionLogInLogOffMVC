@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * cInicio.php
+ * 
+ * Este fichero es utilizado como controlador de la pantalla
+ * principal una vez iniciada la sesión en la aplicación web.
+ * 
+ * @author Israel García Cabañeros <isragarcia97@gmail.com>
+ * @since 11/04/2019
+ * @version 0.1
+ */
+if (isset($_REQUEST['cerrarSession'])) {
+    unset($_SESSION['usuario']);
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+
+if (isset($_REQUEST['editarPerfil'])) {
+    $_SESSION['pagina'] = 'editarPerfil';
+    header('Location: index.php');
+    exit;
+}
+
+if (isset($_REQUEST['mtoDepartamentos'])) {
+    $_SESSION['pagina'] = 'mtoDepartamentos';
+    header('Location: index.php');
+    exit;
+}
+
+if (isset($_REQUEST['detalle'])) {
+    $_SESSION['pagina'] = 'detalle';
+    header('Location: index.php');
+    exit;
+}
+
+if (!isset($_SESSION['usuario'])) { // Si no existe la sesión 'usuario' o esta se encuentra en null...
+    header('Location: index.php'); // El encabezado de la página no redigira a index.php.
+} else {
+    require_once $vistas['layout']; // Si la sesión existe y tiene un valor distinto de null en el array asociativo de vistas requerirá el layout.
+}
+
