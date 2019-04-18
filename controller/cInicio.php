@@ -18,7 +18,7 @@ if (isset($_REQUEST['cerrarSession'])) {
 }
 
 if (isset($_REQUEST['editarPerfil'])) {
-    $_SESSION['pagina'] = 'editarPerfil';
+    $_SESSION['pagina'] = 'miCuenta';
     header('Location: index.php');
     exit;
 }

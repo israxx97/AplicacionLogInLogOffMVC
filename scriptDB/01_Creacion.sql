@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS T01_Usuarios(
     T01_Password VARCHAR(256) NOT NULL,
     T01_DescUsuario VARCHAR(255) NOT NULL,
     T01_FechaHoraUltimaConexion INT NOT NULL,
+    T01_NumAccesos INT NOT NULL,
     T01_Perfil enum('usuario', 'administrador') NOT NULL,
     T01_ImagenUsuario BLOB
 )Engine=InnoDB;

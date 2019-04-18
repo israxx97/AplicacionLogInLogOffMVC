@@ -7,7 +7,7 @@ Se creará una aplicación en PHP con la arquitectura Modelo Vista Controlador. 
 * Editar perfil.
 * Borrar cuenta.
 
-## v0.1 - 15/04/2019, 16:07 (Versión actual)
+## v0.1 - 15/04/2019, 16:07
 Actualmente se encuentra en funcionamiento el inicio y el borrado de la sesión de usuario.
 
 * config
@@ -51,3 +51,45 @@ Actualmente se encuentra en funcionamiento el inicio y el borrado de la sesión 
         * Añadido EstructuraDeAlmacenamiento.JPG.
 
 * Añadido index.php
+
+## v0.2 - 18/04/2019, 23:02 (Versión actual)
+En esta versión se implementa la edición de la descripción del usuario y el borrado de la cuenta de usuario.
+
+* config
+    * Modificado config.php.
+
+* controller
+    * Modificado cInicio.php.
+    * Modificado cLogin.php.
+    * Añadido cMiCuenta.php.
+
+* model
+    * Modificado Usuario.php.
+    * Modificado UsuarioPDO.php.
+
+* scriptDB
+    * Modificado 01_Creacion.sql.
+    * Modificado 02_Inserción.sql.
+
+* view
+    * Modificado layout.php.
+    * Modificado vInicio.php.
+    * Modificado vLogin.php.
+    * Añadido vMiCuenta.php.
+    * Añadido vRegistro.php.
+
+* webroot
+    * css
+        * Añadido vInicioStyles.css.
+        * Añadido vMiCuentaStyles.css.
+
+    * images
+        * Añadido 20-xampp-logo-trio1.jpg.
+        * Añadido 598970_ee10-1.jpg.
+        * Añadido GitHub-Octocat.jpg.
+        * Añadido Jquery-Logo.png.
+        * Añadido bootswatch.png.
+        * Añadido netbeans-logo-500x330.jpg.
+        * Añadido rss2.jpg.
+
+* Modificado index.php
