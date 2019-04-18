@@ -1,5 +1,5 @@
 -- Inserción de datos en la tabla T01_Usuarios. --
-INSERT INTO T01_Usuarios (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_FechaHoraUltimaConexion, T01_Perfil, T01_ImagenUsuario) VALUES 
+INSERT INTO T01_Usuarios (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_FechaHoraUltimaConexion, T01_NumAccesos, T01_Perfil, T01_ImagenUsuario) VALUES 
     ('admin', SHA2('paso', 256), 'Administrador', 0, 'administrador', NULL),
     ('israel', SHA2('paso', 256), 'Israel', 0, 'usuario', NULL),
     ('christian', SHA2('paso', 256), 'Christian', 0, 'usuario', NULL),

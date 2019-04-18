@@ -91,15 +91,40 @@ class Usuario {
     }
 
     public function modificarUsuario($password, $descUsuario, $perfil) {
-        
+        $codUsuario = $this->getCodUsuario();
+        $usuario = null;
+        if ($perfil == null) {
+            $a_usuario = UsuarioPDO::modificarUsuario($codUsuario, $password, $descUsuario);
+        } else {
+            $a_usuario = UsuarioPDO::modificarCuenta($codUsuario, $password, $descUsuario, $perfil);
+        }
+
+        if (!empty($a_usuario)) {
+            $usuario = new Usuario($a_usuario['T01_CodUsuario'], $a_usuario['T01_Password'], $a_usuario['T01_DescUsuario'], $a_usuario['T01_NumAccesos'], $a_usuario['T01_FechaHoraUltimaConexion'], $a_usuario['T01_Perfil']);
+        }
+        return $usuario;
     }
 
     public function borrarUsuario() {
-        
+        $codUsuario = $this->getCodUsuario();
+        $borrado = UsuarioPDO::borrarUsuario($codUsuario);
+        return $borrado;
     }
 
     public function registrarUltimaConexion() {
-        
+        setlocale(LC_TIME, 'es_ES.UTF-8');
+        date_default_timezone_set('Europe/Madrid');
+        $codUsuario = $this->getCodUsuario();
+        $a_fechaAccesos = UsuarioPDO::registrarUltimaConexion($codUsuario);
+        $fecha = date('d-m-Y, H:i:s', $a_fechaAccesos['T01_FechaHoraUltimaConexion']);
+        $numAccesos = $a_fechaAccesos['T01_NumAccesos'];
+
+        if ($this->getNumAccesos() == 0) {
+            $ultimaConexion = 'Bienvenid@ por primera vez, ' . $this->getDescUsuario() . '.';
+        } else {
+            $ultimaConexion = 'Hola de nuevo ' . $this->getDescUsuario() . ', número de visitas anteriores ' . $this->getNumAccesos() . '.<br>Última vez ' . $fecha . '.';
+        }
+        return $ultimaConexion;
     }
 
     public static function validarCodNoExiste($codUsuario) {

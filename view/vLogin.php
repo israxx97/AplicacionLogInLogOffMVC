@@ -31,11 +31,15 @@
                     </div>
                     <p><font color="red"><?php echo $a_errores['password']; ?></font></p>
                     <p><font color="red"><?php echo $a_errores['noExiste']; ?></font></p>
-                    <div class="form-check">
-                        <input name="materialChecked2" id="materialChecked2" type="checkbox" class="form-check-input" id="materialChecked2">
-                        <label class="form-check-label" for="materialChecked2" onclick="mostrarPass();">Mostrar contraseña</label>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input name="materialChecked2" id="materialChecked2" type="checkbox" class="custom-control-input" id="materialChecked2">
+                            <label class="custom-control-label" for="materialChecked2" onclick="mostrarPass();">Mostrar contraseña</label>
+                        </div>
                     </div>
                     <div class="modal-footer">
+                        <p>¿No tienes cuenta?</p>
+                        <input type="submit" class="btn btn-default bg-primary" name="registrarse" value="Regístrate" onclick="return false">
                         <div class="btn-group btn-group-justified" role="group" aria-label="group button">
                             <div class="btn-group" role="group">
                                 <input type="submit" class="btn btn-default bg-primary" name="enviar" value="Entrar"> 

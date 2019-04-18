@@ -30,11 +30,11 @@ $a_errores = [
     'noExiste' => null
 ];
 
-/* if (isset($_POST['registrarse'])) {
-  $_SESSION['pagina'] = 'registrarse';
-  header('Location: index.php');
-  exit;
-  } */
+if (isset($_REQUEST['registrarse'])) {
+    $_SESSION['pagina'] = 'registrarse';
+    header('Location: index.php');
+    exit;
+}
 
 if (isset($_REQUEST['enviar'])) {
     $a_errores['username'] = validacionFormularios::comprobarAlfabetico($_POST['username'], LONGMAXUSUARIO, LONGMINUSUARIO, OBLIGATORIO);
