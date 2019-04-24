@@ -4,7 +4,7 @@ require_once 'config/configDB.php';
 
 class DBPDO {
 
-    public function ejecutaConsulta($sentenciaSQL, $parametros) {
+    public static function ejecutaConsulta($sentenciaSQL, $parametros) {
         try {
             $miDB = new PDO(HOST_DB, USER_DB, PASS_DB);
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -13,6 +13,7 @@ class DBPDO {
         } catch (PDOException $pdoe) {
             $statement = null;
             $pdoe->getMessage();
+        } finally {
             unset($miDB);
         }
         return $statement;

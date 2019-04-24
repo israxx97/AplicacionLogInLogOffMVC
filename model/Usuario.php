@@ -87,7 +87,12 @@ class Usuario {
     }
 
     public static function altaUsuario($codUsuario, $password, $descUsuario) {
-        
+        $usuario = null;
+        $a_usuario = UsuarioPDO::altaUsuario($codUsuario, $password, $descUsuario);
+        if (!empty($a_usuario)) {
+            $usuario = new Usuario($codUsuario, $password, $descUsuario, $a_usuario['T01_NumAccesos'], $a_usuario['T01_FechaHoraUltimaConexion'], $a_usuario['T01_Perfil']);
+        }
+        return $usuario;
     }
 
     public function modificarUsuario($password, $descUsuario, $perfil) {
@@ -128,7 +133,8 @@ class Usuario {
     }
 
     public static function validarCodNoExiste($codUsuario) {
-        
+        $existe = UsuarioPDO::validarCodNoExiste($codUsuario);
+        return $existe;
     }
 
     public static function buscaUsuariosPorDesc($descUsuario, $pagina, $registrosPagina) {

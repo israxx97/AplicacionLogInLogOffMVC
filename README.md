@@ -1,11 +1,12 @@
 # AplicacionLogInLogOffMVC
 Se creará una aplicación en PHP con la arquitectura Modelo Vista Controlador. Los objetivos serán los siguientes:
 
-* Iniciar sesión.
-* Borrar sesión.
-* Registrarse.
-* Editar perfil.
-* Borrar cuenta.
+- [x] Iniciar sesión.
+- [x] Borrar sesión.
+- [x] Registrarse.
+- [x] Editar perfil.
+- [x] Borrar cuenta.
+- [ ] Modificar contraseña. (Adicional)
 
 ## v0.1 - 15/04/2019, 16:07
 Actualmente se encuentra en funcionamiento el inicio y el borrado de la sesión de usuario.
@@ -52,7 +53,7 @@ Actualmente se encuentra en funcionamiento el inicio y el borrado de la sesión 
 
 * Añadido index.php
 
-## v0.2 - 18/04/2019, 23:02 (Versión actual)
+## v0.2 - 18/04/2019, 23:02
 En esta versión se implementa la edición de la descripción del usuario y el borrado de la cuenta de usuario.
 
 * config
@@ -93,3 +94,26 @@ En esta versión se implementa la edición de la descripción del usuario y el b
         * Añadido rss2.jpg.
 
 * Modificado index.php
+
+## v0.3 - 14/04/2019, 23:06 (Versión actual)
+En esta versión se hace uso de la clase DBPDO.php en las funciones de la clase UsuarioPDO.php, además se ha 
+implementado la funcionalidad del registro de usuario. 
+
+Con esta versión se cumplen los objetivos principales de la aplicación pero se le añadirá en la próxima versión
+la funcionalidad del cambio de contraseña.
+
+* controller
+    * Añadido cRegistro.php.
+
+* model
+    * Modificado DBPDO.php.
+    * Modificado Usuario.php.
+    * Modificado UsuarioPDO.php.
+    
+* view
+    * Modificado vLogin.php.
+    * Añadido vRegistro.php.
+
+* webroot
+    * css
+        * Añadido vRegistroStyles.php.
