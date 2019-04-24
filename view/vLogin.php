@@ -38,11 +38,14 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p>¿No tienes cuenta?</p>
-                        <input type="submit" class="btn btn-default bg-primary" name="registrarse" value="Regístrate" onclick="return false">
                         <div class="btn-group btn-group-justified" role="group" aria-label="group button">
                             <div class="btn-group" role="group">
                                 <input type="submit" class="btn btn-default bg-primary" name="enviar" value="Entrar"> 
+                            </div>
+                        </div>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                            <div class="btn-group" role="group">
+                                <input type="submit" class="btn btn-default bg-primary" name="registrarse" value="Regístrate">
                             </div>
                         </div>
                     </div>
