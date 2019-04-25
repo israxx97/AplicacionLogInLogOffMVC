@@ -1,10 +1,22 @@
 <?php
 
-require_once 'config/configDB.php';
+/*
+ * Archivo de configuración de la base de datos.
+ */
+require_once 'config/configDB_localhost.php';
+/*
+ * Archivo de validación de los campos de los formularios.
+ */
 require_once 'core/validacionFormularios.php';
+/*
+ * Archivos de los modelos.
+ */
 require_once 'model/Usuario.php';
-// require_once 'model/';
 
+
+/*
+ * Constantes usadas para las funciones de la validación de formularios.
+ */
 define("OBLIGATORIO", 1);
 define("NOOBLIGATORIO", 0);
 define("LONGMAX", 3);
@@ -27,6 +39,9 @@ define("LONGMAXTEXTOLIBRE", 250);
 define("LONGMINTEXTOLIBRE", 10);
 define("REGISTROSPAGINA", 3);
 
+/*
+ * Array de controladores.
+ */
 $controladores = [
     'login' => 'controller/cLogin.php',
     'inicio' => 'controller/cInicio.php',
@@ -60,6 +75,9 @@ $controladores = [
     'error' => 'controller/cError.php'
 ];
 
+/*
+ * Array de vistas.
+ */
 $vistas = [
     'layout' => 'view/layout.php',
     'login' => 'view/vLogin.php',

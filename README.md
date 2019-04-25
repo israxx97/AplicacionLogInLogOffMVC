@@ -8,7 +8,35 @@ Se creará una aplicación en PHP con la arquitectura Modelo Vista Controlador. 
 - [x] Borrar cuenta.
 - [ ] Modificar contraseña. (Adicional)
 
-## v0.3 - 14/04/2019, 23:06 (Versión actual)
+## v0.3.1 - 26/04/2019, 00:25 (Versión actual)
+En esta versión se han añadido Work In Progress y Error.
+
+* config
+    * Modificado config.php.
+    * Añadido configDB_ED.php.
+    * Añadido configDB_EE.php.
+    * Añadido configDB_localhost.php.
+
+* controller
+    * Añadido cError.php.
+    * Modificado cInicio.php.
+    * Modificado cMiCuenta.php.
+    * Añadido cWIP.php.
+
+* model
+    * Modificado DBPDO.php.
+    * Modificado Usuario.php.
+    * Modificado UsuarioPDO.php.
+
+* webroot
+    * css
+        * Añadido vWIPStyles.css.
+    * images
+        * Añadido newyork-810x566.jpg.
+
+* Modificado index.php.
+
+## v0.3 - 24/04/2019, 23:06
 En esta versión se hace uso de la clase DBPDO.php en las funciones de la clase UsuarioPDO.php, además se ha 
 implementado la funcionalidad del registro de usuario. 
 
