@@ -3,7 +3,7 @@
 /*
  * Archivo de configuración de la base de datos.
  */
-require_once 'config/configDB_localhost.php';
+require_once 'config/configDB_ED.php';
 /*
  * Archivo de validación de los campos de los formularios.
  */

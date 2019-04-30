@@ -8,6 +8,31 @@ Se creará una aplicación en PHP con la arquitectura Modelo Vista Controlador. 
 - [x] Borrar cuenta.
 - [ ] Modificar contraseña. (Adicional)
 
+## v0.4 - 30/04/2019, 10:22
+En esta versión se han modificado algunas vistas y se ha hecho una clase para guardar en un archivo de errores los
+errores que puedan salir en la ejecución del programa.
+
+* config.
+    * Modificado config.php.
+
+* model
+    * Modificado DBPDO.php.
+    * Añadido Errores.php.
+    * Modificado UsuarioPDO.php.
+
+* tmp
+    * Añadido errores.txt. (Se crea o modifica si salta un error).
+
+* view
+    * Modificado vError.php.
+    * Modificado vInicio.php.
+    * Modificado vMiCuenta.php.
+    * Modificado vWIP.php.
+
+* webroot
+    * css
+        * vMiCuentaStyles.css.
+
 ## v0.3.1 - 26/04/2019, 00:25 (Versión actual)
 En esta versión se han añadido Work In Progress y Error.
 
