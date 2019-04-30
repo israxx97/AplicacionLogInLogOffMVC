@@ -1,8 +1,7 @@
 <?php
 
 require_once 'DBPDO.php';
-require_once 'UsuarioDB.php';
-// require_once 'config/configDB_ED.php';
+require_once 'UsuarioDB.php'; // Si no se incluye, da error al hacer el implements UsuarioDB
 
 /**
  * UsuarioPDO.php

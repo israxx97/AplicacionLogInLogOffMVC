@@ -1,25 +1,25 @@
 <link rel="stylesheet" type="text/css" href="webroot/css/vInicioStyles.css">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#" onclick="return false">Ventana de inicio</a>
-    <form name="formInicio" action="<?php echo $_SERVER['PHP_SELF']; ?>" action="POST">
-        <ul class="nav nav-pills">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['usuario']->getDescUsuario(); ?></a>
-                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                    <input type="submit" id="editarPerfil" class="dropdown-item" name="editarPerfil" value="Editar Perfil"/>
-                    <input type="submit" id="mtoDepartamentos" class="dropdown-item" name="mtoDepartamentos" value="Mto. Departamentos"/>    
-                    <?php if ($_SESSION['usuario']->getPerfil() == 'administrador') { ?>
-                        <div class="dropdown-divider"></div>
-                        <input type="submit" id="mtoUsuarios" class="dropdown-item bg-warning" name="mtoUsuarios" value="Mto. Usuarios"/>
-                    <?php } ?>
-                    <div class="dropdown-divider"></div>
-                    <input type="submit" id="cerrarSession" class="dropdown-item bg-danger" name="cerrarSession" value="Log Out"/>
-                </div>
+    <form class="container" name="formInicio" action="<?php echo $_SERVER['PHP_SELF']; ?>" action="POST">
+        <ul class="nav nav-pills container">
+            <li class="nav-item">
+                <input type="submit" id="cerrarSession" style="margin-right: 5px;" class="btn btn-outline-danger" name="cerrarSession" value="Log Out"/>
             </li>
+            <li class="nav-item">
+                <input type="submit" id="editarPerfil" style="margin-right: 5px;" class="btn btn-outline-info" name="editarPerfil" value="Editar Perfil"/>
+            </li>
+            <li class="nav-item">
+                <input type="submit" id="mtoDepartamentos" style="margin-right: 5px;" class="btn btn-outline-info" name="mtoDepartamentos" value="Mto. Departamentos"/>
+            </li>
+            <?php if ($_SESSION['usuario']->getPerfil() == 'administrador') { ?>
+                <li class="nav-item">
+                    <input type="submit" id="mtoUsuarios" style="margin-right: 5px;" class="btn btn-outline-warning" name="mtoUsuarios" value="Mto. Usuarios"/>
+                </li>
+            <?php } ?>
         </ul>
     </form>
 </nav>
-<p><?php echo $_SESSION['visitas'] ?></p>
+<p class="container"><?php echo $_SESSION['visitas'] ?></p>
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">

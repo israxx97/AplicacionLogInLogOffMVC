@@ -1,0 +1,21 @@
+Fecha del error: 26-04-2019, 17:22:10
+Fichero del error: I:\xampp\htdocs\index_03\index\ProyectoDWES\ProyectoTema06\codigoPHP\AplicacionLogInLogOffMVC\model\DBPDO.php
+Linea del error: 10
+Código del error: 1044
+Mensaje del error: SQLSTATE[HY000] [1044] Access denied for user 'usuarioDAW202_AplicacionLILOMVC'@'localhost' to database 'aw202_aplicacionloginlogoffmvc'
+Fecha del error: 26-04-2019, 17:51:13
+Fichero del error: I:\xampp\htdocs\index_03\index\ProyectoDWES\ProyectoTema06\codigoPHP\AplicacionLogInLogOffMVC\model\DBPDO.php
+Linea del error: 10
+Código del error: 1044
+Mensaje del error: SQLSTATE[HY000] [1044] Access denied for user 'usuarioDAW202_AplicacionLILOMVC'@'localhost' to database 'aw202_aplicacionloginlogoffmvc'
+Fecha del error: 26-04-2019, 17:53:29
+Fichero del error: I:\xampp\htdocs\index_03\index\ProyectoDWES\ProyectoTema06\codigoPHP\AplicacionLogInLogOffMVC\model\DBPDO.php
+Linea del error: 10
+Código del error: 1044
+Mensaje del error: SQLSTATE[HY000] [1044] Access denied for user 'usuarioDAW202_AplicacionLILOMVC'@'localhost' to database 'aw202_aplicacionloginlogoffmvc'
+Fecha del error: 26-04-2019, 17:54:28
+Fichero del error: I:\xampp\htdocs\index_03\index\ProyectoDWES\ProyectoTema06\codigoPHP\AplicacionLogInLogOffMVC\model\DBPDO.php
+Linea del error: 10
+Código del error: 1044
+Mensaje del error: SQLSTATE[HY000] [1044] Access denied for user 'usuarioDAW202_AplicacionLILOMVC'@'localhost' to database 'aw202_aplicacionloginlogoffmvc'
+
